@@ -1,0 +1,238 @@
+/* ==========================================================
+   ESTILOS GENERALES Y MAQUETACIÓN (Trabajo Práctico N° 4)
+   ========================================================== */
+
+/* Reseteo del modelo de caja básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+    line-height: 1.5;
+}
+
+/* Cabecera consistente y predecible (Logo izquierda, Menú derecha) */
+header {
+    background-color: #003A70; /* Azul Oficial de Boca Hexadecimal */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #F6B000; /* Oro Oficial */
+}
+
+.logo {
+    width: 45px;
+    height: auto;
+    display: block;
+}
+
+/* Estructura básica de la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* ==========================================================
+   PERSONALIZACIÓN DE LOS ENLACES (Requisitos obligatorios)
+   ========================================================== */
+
+/* 1. Estado :link (No visitado) */
+nav ul li a:link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* 2. Estado :visited (Enlace visitado) */
+nav ul li a:visited {
+    color: #e2e8f0; /* Un color ligeramente distinto para el historial */
+}
+
+/* 3. Estado :hover (Feedback visual al pasar el cursor) */
+nav ul li a:hover {
+    color: #003A70 !important;
+    background-color: #F6B000; /* Fondo amarillo */
+    text-decoration: none;
+}
+
+/* 4. Estado :active (Momento de pulsar click) */
+nav ul li a:active {
+    background-color: #e5a900;
+}
+
+/* Enlaces generales del contenido principal */
+main a:link {
+    color: #003A70;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+main a:visited {
+    color: #002244;
+}
+
+main a:hover {
+    color: #F6B000;
+    text-decoration: none;
+}
+
+/* ==========================================================
+   SIMULACIÓN DE BOTÓN (Propiedades requeridas)
+   ========================================================== */
+.boton-personalizado {
+    display: inline-block; /* Requisito obligatorio */
+    padding: 10px 20px; /* Requisito: margen interno */
+    background-color: #003A70; /* Color de fondo */
+    color: #ffffff !important;
+    font-weight: bold;
+    text-decoration: none !important; /* Requisito: elimina subrayado */
+    border-radius: 4px;
+    border: 2px solid #F6B000;
+    margin-top: 15px;
+}
+
+.boton-personalizado:hover {
+    background-color: #F6B000;
+    color: #003A70 !important;
+}
+
+/* Steve Krug - Clase "activo" para saber dónde estamos parados */
+nav ul li a.activo {
+    background-color: #F6B000;
+    color: #003A70 !important;
+}
+
+/* ==========================================================
+   MAQUETACIÓN Y MODELO DE CAJA
+   ========================================================== */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.banner-inicio {
+    background-color: #003A70;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 6px solid #F6B000;
+    margin-bottom: 25px;
+}
+
+.banner-inicio h1 {
+    font-size: 26px;
+    color: #F6B000;
+    margin-bottom: 5px;
+}
+
+.banner-inicio h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.usabilidad-explicacion {
+    margin-top: 20px;
+}
+
+.usabilidad-explicacion h3 {
+    border-bottom: 2px solid #F6B000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #003A70;
+}
+
+/* Estructura para Plantel */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.carta-jugador {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.carta-jugador h3 {
+    color: #003A70;
+    margin-bottom: 5px;
+}
+
+.enlaces-utiles {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+/* Estructura para Galería */
+.contenedor-galeria {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.foto-tarjeta {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.foto-archivo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Estructura para Contacto */
+.caja-contacto {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 450px;
+    margin: 25px auto 0;
+}
+
+.caja-enlace-correo {
+    margin-top: 15px;
+    background-color: #003A70;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.enlace-mail {
+    color: #F6B000 !important;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+/* Footer general */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 30px;
+}
